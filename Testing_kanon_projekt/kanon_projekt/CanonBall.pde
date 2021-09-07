@@ -13,7 +13,7 @@ class CanonBall {
     this.radius = radius;
     this.direction = direction;
     this.angle = angle;
-    velocity = new PVector(direction*cos(angle)*5, sin(angle)*5);
+    velocity = new PVector(hs1.getPos()*direction*cos(angle)*5, hs1.getPos()*sin(angle)*5);
 
   }
 
@@ -21,6 +21,7 @@ class CanonBall {
     applyForce(gravity);
     position.add(velocity);
     velocity.add(acceleration);
+    //velocity.mult(hs1.getPos());
   }
 
   void display() {
@@ -30,8 +31,9 @@ class CanonBall {
     popMatrix();
   }
 
+
   boolean hasHit() {
-    if (velocity.x == 0 && velocity.y == 0 || position.x > width || position.x < 0 || position.y > height || position.y < 0) {
+    if (velocity.x == 0 && velocity.y == 0 || position.x > width || position.x < 0) {
       return true;
     } else {
       return false;

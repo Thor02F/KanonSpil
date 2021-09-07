@@ -36,7 +36,7 @@ class HScrollbar {
   int loose;              // how loose/heavy
   boolean over;           // is the mouse over the slider?
   boolean locked;
-  float ratio;
+  float ratio = 4000;
 
   HScrollbar (float xp, float yp, int sw, int sh, int l) {
     swidth = sw;
@@ -101,6 +101,7 @@ class HScrollbar {
   float getPos() {
     // Convert spos to be values between
     // 0 and the total width of the scrollbar
-    return spos * ratio;
+    
+    return 1+(spos+0.1)/100;
   }
 }
