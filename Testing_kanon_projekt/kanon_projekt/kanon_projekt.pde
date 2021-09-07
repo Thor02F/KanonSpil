@@ -7,13 +7,23 @@ void setup() {
   size(720, 360);
   canon1 = new Canon(new PVector(200, 200), theta1, 1.0, 40.0);
   canon2 = new Canon(new PVector(400, 200), theta2, -1.0, 40.0);
+ map = new Map();
+ esp = loadImage("COLLAGE3.png");
+ image(esp,0,0,width,height);
+ 
+   esp = loadImage("COLLAGE3.png");
+  image(esp,0,0,width,height);
+  
+  noStroke();
+  
+  hs1 = new HScrollbar(0, height/1.25, width/3, 16, 16);
+  hs2 = new HScrollbar(2*width/3, height/1.25, width/3, 16, 16);
 }
 
 //midlertidig knap til at skyde
 void keyPressed() {
   if (key == 's' ) {
-    canon1.shoot();
-    canon2.shoot();
+
   }
 }
 
@@ -23,7 +33,7 @@ void draw() {
   canon1.run();
   canon2.run();
   //println();
-  
+/*
   //Life_Script
     if(canonball in p2 hitbox){//boolean  argumentet for p1 og p2 collision med canonball skal laves
     p2hit = true;
@@ -41,7 +51,7 @@ void draw() {
   }
   text(p2life,width/16,height/16, 9999,9999);
   text(p1life,width/16,height/16, 9999,9999);
-  
+ */
   
   
   //powerSlider
@@ -66,5 +76,7 @@ void draw() {
     cB = new Button(width/2, height/1.25, 125, "Fire Player 2", color(0, 0, 255));
   }
   if (cB.visible) cB.show();
-}
+  
+  //map1337Espen2
+  map.display();
 }

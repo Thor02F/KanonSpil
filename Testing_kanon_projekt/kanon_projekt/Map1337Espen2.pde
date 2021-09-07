@@ -1,5 +1,6 @@
 float twidth = 50;
 float theight = 50;
+/*
 class Map {
   
  void display(){
@@ -10,18 +11,20 @@ class Map {
  }
   
 }
+*/
+//Map map;
 
-Map map;
-
-PImage esp;
-
+//PImage esp;
+/*
 void setup(){
  size(1000,800);
  map = new Map();
  esp = loadImage("COLLAGE3.png");
  image(esp,0,0,width,height);
 }
-
+*/
+/*
 void draw(){
   map.display();
 }
+*/

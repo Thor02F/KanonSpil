@@ -1,5 +1,4 @@
-float p2life = new float;
-float p1life = new float;
+
 boolean p2hit = false, p1hit = false;
 float p2life = 100, p1life = 100;
 /*

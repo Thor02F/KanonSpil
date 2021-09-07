@@ -21,6 +21,9 @@ void mousePressed() {
     if (d <= cB.radius){
       // Knappen er klikket på og kalder på funktionen
       toggleColor = !toggleColor;
+          if (toggleColor == true){
+    canon1.shoot();}else
+    canon2.shoot();
     } 
   }
 }

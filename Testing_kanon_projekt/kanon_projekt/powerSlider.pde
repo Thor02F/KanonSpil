@@ -1,13 +1,14 @@
 HScrollbar hs1, hs2;  // Two scrollbars
-
+/*
 void setup() {
   size(640, 360);
+  
   noStroke();
   
   hs1 = new HScrollbar(0, height/1.25, width/3, 16, 16);
   hs2 = new HScrollbar(2*width/3, height/1.25, width/3, 16, 16);
   
-}
+}*/
 /*
 void draw() {
   background(255);
