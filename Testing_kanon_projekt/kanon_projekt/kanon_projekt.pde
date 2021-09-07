@@ -63,7 +63,7 @@ void draw() {
   hs1.display();
  // hs2.display();
   
-  stroke(0);
+  //stroke(0);
 
   
   //circleButton
