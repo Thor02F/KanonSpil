@@ -3,7 +3,7 @@ class CanonBall {
   PVector position;
   PVector velocity;
   PVector acceleration = new PVector();
-  PVector gravity = new PVector(0,0.01);
+  PVector gravity = new PVector(0, 0.005);
   float angle;
   float radius;
   float direction;
@@ -13,8 +13,7 @@ class CanonBall {
     this.radius = radius;
     this.direction = direction;
     this.angle = angle;
-    velocity = new PVector(direction*cos(angle)*5, sin(angle)*5);
-
+    velocity = new PVector(direction*cos(angle)*10, sin(angle)*10);
   }
 
   void update() {
@@ -26,7 +25,7 @@ class CanonBall {
   void display() {
     pushMatrix();
     translate(position.x, position.y);
-    ellipse(0,0,radius,radius);
+    ellipse(0, 0, radius, radius);
     popMatrix();
   }
 
@@ -35,7 +34,7 @@ class CanonBall {
       return true;
     } else {
       return false;
-    }    
+    }
   }
 
   void applyForce(PVector gravity) {
@@ -45,6 +44,5 @@ class CanonBall {
   void run() {
     update();
     display();
-    println(angle);
   }
 }
