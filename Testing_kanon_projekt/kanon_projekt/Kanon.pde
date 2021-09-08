@@ -44,7 +44,7 @@ class Canon {
       CanonBall c = canonBalls.get(i);
       c.run();
       //c.velocity = new PVector(cos(angle)*5, sin(angle*5));
-      if (c.isDead()) {
+      if (c.isDead() || gameState != 1) {
         canonBalls.remove(i);
         //println("removed ball");
       }

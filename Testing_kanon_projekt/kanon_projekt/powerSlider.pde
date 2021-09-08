@@ -1,32 +1,4 @@
 HScrollbar hs1, hs2;  // Two scrollbars
-/*
-void setup() {
-  size(640, 360);
-  
-  noStroke();
-  
-  hs1 = new HScrollbar(0, height/1.25, width/3, 16, 16);
-  hs2 = new HScrollbar(2*width/3, height/1.25, width/3, 16, 16);
-  
-}*/
-/*
-void draw() {
-  background(255);
-  fill(255);
-  
-  
-  fill(255);
-
- 
-  hs1.update();
-  hs2.update();
-  hs1.display();
-  hs2.display();
-  
-  stroke(0);
-  
-}*/
-
 
 class HScrollbar {
   int swidth, sheight;    // width and height of bar
@@ -103,5 +75,10 @@ class HScrollbar {
     // 0 and the total width of the scrollbar
     
     return 1+(spos+0.1)/100;
+  }
+  
+  void run(){
+    display();
+    update();
   }
 }
