@@ -21,8 +21,8 @@ class CanonBall {
     applyForce(gravity);
     position.add(velocity);
     velocity.add(acceleration);
-    
-    if (velocity.x == 0 && velocity.y == 0 || position.x > width || position.x < 0){
+
+    if (velocity.x == 0 && velocity.y == 0 || position.x > width || position.x < 0) {
       hasHit = false;
     }
   }
@@ -37,8 +37,8 @@ class CanonBall {
   void applyForce(PVector gravity) {
     acceleration.add(gravity);
   }
-  
-  
+
+
   boolean isDead() {
     if (position.x < 0 || position.x > width || position.y > height) {
       return true;

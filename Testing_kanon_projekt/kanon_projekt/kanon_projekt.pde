@@ -20,9 +20,9 @@ void setup() {
 
 void draw() {
 
-  if(gameState ==  1){
-  gameScreen();
-  } else if(gameState == 2){
+  if (gameState ==  1) {
+    gameScreen();
+  } else if (gameState == 2) {
     menuScreen();
   } else {
     println("something went wrong");

@@ -50,7 +50,7 @@ class HScrollbar {
 
   boolean overEvent() {
     if (mouseX > xpos && mouseX < xpos+swidth &&
-       mouseY > ypos && mouseY < ypos+sheight) {
+      mouseY > ypos && mouseY < ypos+sheight) {
       return true;
     } else {
       return false;
@@ -67,17 +67,16 @@ class HScrollbar {
       fill(102, 102, 102);
     }
     rect(spos, ypos, sheight, sheight);
-
-    }
+  }
 
   float getPos() {
     // Convert spos to be values between
     // 0 and the total width of the scrollbar
-    
+
     return 1+(spos+0.1)/100;
   }
-  
-  void run(){
+
+  void run() {
     display();
     update();
   }

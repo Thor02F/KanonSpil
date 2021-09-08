@@ -6,25 +6,26 @@ float r = 60; //radius af kuglen
 
 //Ændre tekst her
 /*void draw() {
-  if(toggleColor) {
-    cB = new Button(width/2, height/1.25, 125, "Fire Player 1", color(255, 0, 0));
-  } else {
-    cB = new Button(width/2, height/1.25, 125, "Fire Player 2", color(0, 0, 255));
-  }
-  if (cB.visible) cB.show();
-}
-*/
+ if(toggleColor) {
+ cB = new Button(width/2, height/1.25, 125, "Fire Player 1", color(255, 0, 0));
+ } else {
+ cB = new Button(width/2, height/1.25, 125, "Fire Player 2", color(0, 0, 255));
+ }
+ if (cB.visible) cB.show();
+ }
+ */
 
 void mousePressed() {
   if (cB.visible) { //Hvis knappen ikke kan ses eksistere den ikke
     float d = dist(cB.pos.x, cB.pos.y, mouseX, mouseY);
-    if (d <= cB.radius){
+    if (d <= cB.radius) {
       // Knappen er klikket på og kalder på funktionen
       toggleColor = !toggleColor;
-          if (toggleColor == true){
-    canon1.shoot();}else
-    canon2.shoot();
-    } 
+      if (toggleColor == true) {
+        canon1.shoot();
+      } else
+        canon2.shoot();
+    }
   }
 }
 

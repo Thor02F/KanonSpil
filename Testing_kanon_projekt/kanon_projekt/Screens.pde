@@ -6,21 +6,21 @@ void menuScreen() {
   fill(0);
   textSize(height / 20);
   text("GAME OVER. Press Space", height / 2, width / 2);
-  
+
   for (CanonBall b : canon1.canonBalls) { 
     b.position.x = width * 2;
   }
   for (CanonBall b : canon2.canonBalls) {
     b.position.x = width * 2;
   }
-  
+
   theta1 = theta2 = 0.0;
-  
-  if (keyPressed && key == ' '){ 
-    
+
+  if (keyPressed && key == ' ') { 
+
     p1life = 100;
     p2life = 100;
-    gameState = 1;    
+    gameState = 1;
   }
 }
 
@@ -42,6 +42,6 @@ void gameScreen() {
     cB = new Button(width/2, height/1.1, 60, "Fire Player 2", color(0, 0, 255));
   }
   if (cB.visible) cB.show();
-  
+
   if (p1life <= 0 || p2life <= 0) gameState = 2;
 }
