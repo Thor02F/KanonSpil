@@ -1,5 +1,5 @@
 CanonHandler canonHandler;
-;
+LifeManager lifeManager;
 
 void setup() {
   //size(1280,720);
@@ -16,7 +16,7 @@ void setup() {
   noStroke();
 
   hs1 = new HScrollbar(0, height/1.2, width/3, 20, 16);
-  // hs2 = new HScrollbar(2*width/3, height/1.2, width/3, 20, 16);
+  lifeManager = new LifeManager();
 }
 
 //midlertidig knap til at skyde
@@ -32,38 +32,15 @@ void draw() {
   //map1337Espen2
 
 
-  //Life_Script
+  //draw lifeManager
+  lifeManager.run();
 
-  p2hit = true;
-  //}
-  if (p2hit == true) {
-    p2life -= 10; //mister 10 liv ved et hit
-    p2hit = false; //bør sørge for at der kun trækkes liv fra en gang per hit
-  }
-  if (key == 's' ) {
-    p1hit = true;
-  }
-  if (p1hit == true) {
-    p1life -= 10; //mister 10 liv ved et hit
-    p1hit = false; //bør sørge for at der kun trækkes liv fra en gang per hit
-  }
-  text("p2life", width/16, height/16, 9999, 9999);
-  text("p1life", width/1.2, height/16, 9999, 9999);
-
-
-
-  //powerSlider
-  fill(255);
-
-
+  //draw powerSlider
   fill(255);
 
   hs1.update();
-  // hs2.update();
   hs1.display();
-  // hs2.display();
 
-  stroke(0);
 
 
   //circleButton

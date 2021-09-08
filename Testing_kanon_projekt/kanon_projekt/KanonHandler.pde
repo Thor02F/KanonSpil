@@ -32,21 +32,28 @@ class CanonHandler {
     fill(0, 50, 250);
     canon2.run();
     moveCanons();
+    hitDetect();
   }
 
   void hitDetect() {
     //HIT DETECTION
     for (CanonBall b : canon1.canonBalls) {
       //kanon2 ramt ??
-      if (dist(b.position.x, b.position.y, canon2.position.x, canon2.position.y)<20) {
+      if (dist(b.position.x, b.position.y, canon2.position.x, canon2.position.y)<100) {
         //der skal ske et eller andet med noget liv
+        //println("kanon 2 ramt");
+        b.position.x = width * 2;
+        p2hit = true;
       }
     }
 
     for (CanonBall b : canon2.canonBalls) {
       //kanon1 ramt ?
-      if (dist(b.position.x, b.position.y, canon1.position.x, canon1.position.y)<20) {
+      if (dist(b.position.x, b.position.y, canon1.position.x, canon1.position.y)<100) {
         //der skal ske et eller andet med noget liv
+        println("kanon 1 ramt");
+        b.position.x = width * 2;
+        p1hit = true;
       }
     }
   }

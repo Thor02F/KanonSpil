@@ -7,6 +7,7 @@ class CanonBall {
   float angle;
   float radius;
   float direction;
+  boolean hasHit = false;
 
   CanonBall(PVector position, float angle, float radius, float direction) {
     this.position = position;
@@ -20,7 +21,10 @@ class CanonBall {
     applyForce(gravity);
     position.add(velocity);
     velocity.add(acceleration);
-    //velocity.mult(hs1.getPos());
+    
+    if (velocity.x == 0 && velocity.y == 0 || position.x > width || position.x < 0){
+      hasHit = false;
+    }
   }
 
   void display() {
@@ -30,22 +34,23 @@ class CanonBall {
     popMatrix();
   }
 
-
-  boolean hasHit() {
-    if (velocity.x == 0 && velocity.y == 0 || position.x > width || position.x < 0) {
+  void applyForce(PVector gravity) {
+    acceleration.add(gravity);
+  }
+  
+  
+  boolean isDead() {
+    if (position.x < 0 || position.x > width || position.y > height) {
       return true;
     } else {
       return false;
     }
   }
 
-  void applyForce(PVector gravity) {
-    acceleration.add(gravity);
-  }
-
   void run() {
     update();
     display();
+    //hasHit();
     //println(angle);
   }
 }
