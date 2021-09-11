@@ -1,10 +1,7 @@
 PImage esp;
 Map map = new Map();
-/*
-void setup(){
- esp = loadImage("COLLAGE3.png");
- image(esp,0,0,width,height);
- }*/
+import processing.sound.*;
+SoundFile age_of_war;
 
 class Map {
   void display() {

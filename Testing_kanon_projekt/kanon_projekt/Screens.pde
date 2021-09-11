@@ -6,6 +6,8 @@ void menuScreen() {
   fill(0);
   textSize(height / 20);
   text("GAME OVER. Press Space", height / 2, width / 2);
+  esp = loadImage("COLLAGE3.png");
+  image(esp,0,0,width,height);
 
   for (CanonBall b : canon1.canonBalls) { 
     b.position.x = width * 2;
@@ -25,7 +27,8 @@ void menuScreen() {
 }
 
 void gameScreen() {
-
+  //age_of_war = new SoundFile(this, "Age of War (Remix)");//CUM er en wav fil mens age of war er en mp3 fil, begge crasher spillet (mp3 filen fylder bare mindre)
+  //age_of_war.play();
   background(255);
   map.display();
   canonHandler.run();
