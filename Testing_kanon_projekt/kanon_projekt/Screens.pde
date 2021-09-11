@@ -30,11 +30,10 @@ void gameScreen() {
   map.display();
   canonHandler.run();
   lifeManager.run();
-
   fill(255);
   hs1.run();
-
-
+  ps1.run();
+  ps2.run();
   //circleButton
   if (toggleColor == false) {  
     cB = new Button(width/2, height/1.1, 60, "Fire Player 1", color(255, 0, 0));

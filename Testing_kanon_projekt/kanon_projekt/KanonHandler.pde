@@ -42,6 +42,8 @@ class CanonHandler {
       if (dist(b.position.x, b.position.y, canon2.position.x, canon2.position.y)<50) {
         //der skal ske et eller andet med noget liv
         //println("kanon 2 ramt");
+        ps1 = new ParticleSystem(new PVector(canon2.position.x,canon2.position.y));
+        ps1.addParticle();
         b.position.x = width * 2;
         p2hit = true;
       }
@@ -51,7 +53,9 @@ class CanonHandler {
       //kanon1 ramt ?
       if (dist(b.position.x, b.position.y, canon1.position.x, canon1.position.y)<50) {
         //der skal ske et eller andet med noget liv
-        println("kanon 1 ramt");
+        //println("kanon 1 ramt");
+        ps2 = new ParticleSystem(new PVector(canon1.position.x,canon1.position.y));
+        ps2.addParticle();
         b.position.x = width * 2;
         p1hit = true;
       }
