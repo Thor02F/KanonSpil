@@ -16,22 +16,22 @@ class Particle {
     display();
   }
 
-  // Method to update position
+  //Opdater livet
   void update() {
-    velocity.add(acceleration);
-    position.add(velocity);
-    lifespan -= 7.0;
+    //velocity.add(acceleration);
+    //position.add(velocity);
+    lifespan -= 15.0;
   }
 
-  // Method to display
+  // Method til display
   void display() {
     stroke(0,lifespan);
     strokeWeight(2);
-    fill(255,0,10,lifespan);
-    ellipse(position.x,position.y,100,100);
+    fill(255,0,0,lifespan); //RGB code og synlighed
+    ellipse(position.x,position.y,150,150);
   }
   
-  // Is the particle still useful?
+  //Fjerner døde partikler
   boolean isDead() {
     if (lifespan < 0.0) {
       return true;

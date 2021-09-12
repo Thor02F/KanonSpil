@@ -1,3 +1,6 @@
+//SoundFile file;
+//boolean toggleMusic = false;
+
 void menuScreen() {  
   cB = new Button(width*2, height/1.1, 60, "Fire Player 1", color(255, 0, 0));
   canonHandler = new CanonHandler();
@@ -27,8 +30,11 @@ void menuScreen() {
 }
 
 void gameScreen() {
-  //age_of_war = new SoundFile(this, "Age of War (Remix)");//CUM er en wav fil mens age of war er en mp3 fil, begge crasher spillet (mp3 filen fylder bare mindre)
-  //age_of_war.play();
+  //file = new SoundFile(this, "Tanks.wav");// Musiken begynder at at være funky efter noget tid
+  //if (toggleMusic == false){
+  //file.play();
+  //toggleMusic = true;
+  //}
   background(255);
   map.display();
   canonHandler.run();
