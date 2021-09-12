@@ -5,3 +5,4 @@ Den mappe der er i brugt for de endlige versioner af alle scripts er i "Final_ka
 
 Tidsplan/Burndownchart er i "Tidsplan Geogebra" der en geogebra file og en png fil med samme navn
 
+Spiller 1 bruger wasd og spiller 2 bruger ijkl
