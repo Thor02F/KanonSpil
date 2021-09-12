@@ -4,7 +4,7 @@ int gameState = 2;
 ParticleSystem ps1, ps2;
 
 void setup() {
-  fullScreen();
+  size (1280,720);
   canonHandler = new CanonHandler();
   canonHandler.setupCanons();
   ps1 = new ParticleSystem(new PVector(canon2.position.x,canon2.position.y));
